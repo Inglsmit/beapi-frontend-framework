@@ -145,12 +145,8 @@
 
 //Success
 .gform_confirmation_message{
-	@extend .message;
-	@extend .success;
 }
 //Errors
 .validation_error,
 .gfield_error {
-	@extend .message;
-	@extend .error;
 }

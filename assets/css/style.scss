@@ -18,35 +18,17 @@
 @import "root/box-sizing";
 @import "root/cssloading";
 
-//Load vendor css from bower 
-@import "vendor/magnific-popup";
-
 //Main websites components
 //@import "components/icons"; use iconfont for ie8 and minus projects. task => iconfont.js
 @import "components/svg-icons";
-@import "components/text";
-@import "components/img";
-@import "components/form";
-@import "components/buttons";
-@import "components/messages";
 
 //Main websites patterns
-@import "patterns/lazyload";
-@import "patterns/global";
 @import "patterns/utilities";
 @import "patterns/plugins";
-@import "patterns/layout";
 @import "patterns/header";
 @import "patterns/footer";
-@import "patterns/menus";
-@import "patterns/breadcrumb";
-@import "patterns/entries";
-@import "patterns/comments";
 @import "patterns/widgets";
-@import "patterns/searchform";
+@import "patterns/lazyload";
 
 //Pages
-@import "pages/default";
-@import "pages/404";
-@import "pages/home";
 @import "pages/print";

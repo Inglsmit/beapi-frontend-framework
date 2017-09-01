@@ -6,10 +6,7 @@ var lazySizes = require('lazysizes')
 var lazySizesBgset = require('lazysizes/plugins/bgset/ls.bgset')
 require('picturefill')
 
-require('./src/button-href')
 require('./src/ie_message')
-require('./src/lightbox')
-require('./src/menu')
 require('./src/placeholder')
 require('./src/scripts-domready')
 

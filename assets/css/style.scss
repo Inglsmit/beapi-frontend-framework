@@ -1,34 +1,10 @@
 //Main sass config files
 @import "root/url-config";
-
-// Load Susy with includePaths in tasks/sass.js
-//http://susydocs.oddbird.net/en/latest/
-@import "root/susy/sass/susy";
-
-//Load Bourbon mixin library with includePaths in tasks/sass.js
-//http://bourbon.io/docs/
-@import "root/bourbon/app/assets/stylesheets/bourbon";
-
 @import "root/variables"; 
 @import "root/mixins";
 
-//@font-face first !
-@import "root/fonts";
-@import "root/normalize";
-@import "root/box-sizing";
-@import "root/cssloading";
-
 //Main websites components
-//@import "components/icons"; use iconfont for ie8 and minus projects. task => iconfont.js
-@import "components/svg-icons";
 
 //Main websites patterns
-@import "patterns/utilities";
-@import "patterns/plugins";
-@import "patterns/header";
-@import "patterns/footer";
-@import "patterns/widgets";
-@import "patterns/lazyload";
 
 //Pages
-@import "pages/print";

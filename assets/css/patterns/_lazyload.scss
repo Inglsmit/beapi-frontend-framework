@@ -1,9 +1,7 @@
-.lazyload,
-.lazyloading {
+.lozad{
 	opacity: 0;
-	background: $maincolor;
 }
-.lazyloaded {
+.lozad[data-loaded=true] {
 	opacity: 1;
 	transition : opacity .5s;
 }
@@ -12,7 +10,7 @@
 //with basicspinner
 $loading-dimensions : 50px;
 
-[data-bgset] {
+[data-background-image] {
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -45,15 +43,15 @@ $loading-dimensions : 50px;
 		transition: opacity .5s, z-index .5s ease .5s;
 		animation: loading .5s linear infinite;
 	}
-	&.lazyload {
+	&.lozad {
 		opacity: 1;
 		transition : opacity 0.5s;
-	}
-	&.lazyloaded {
-		&:after,
-		&:before {
-			opacity: 0;
-			z-index: -$zindex;
+		&[data-loaded=true] {
+			&:after,
+			&:before {
+				opacity: 0;
+				z-index: -$zindex;
+			}
 		}
 	}
 }

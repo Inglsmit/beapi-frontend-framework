@@ -65,7 +65,7 @@ function get_the_post_thumbnail( $post_id = 0, $size_or_img_name = 'thumbnail', 
 
 		// add lazyload on all medias
 		if ( defined( 'BEA_LAZYSIZE' ) && true === BEA_LAZYSIZE ) {
-			$attr['class'] = $attr['class'] . ' lazyload';
+			$attr['class'] = $attr['class'] . ' lozad';
 		}
 
 		if ( isset( $location->class ) && ! empty( $location->class ) ) {

@@ -15,6 +15,15 @@
 				</div>
 			</header>
 			<section class="entry__content" itemprop="articleBody">
+
+				<h2>Image with lozad</h2>
+				<p>
+					<a href="../assets/img/bg-sample/bg_img-mobile-02.jpg">
+						<img class="lozad" data-src="../assets/img/bg-sample/bg_img-mobile-02.jpg" data-srcset="../assets/img/bg-sample/bg_img-mobile-02.jpg 1023w, ../assets/img/bg-sample/bg_img-desktop-02.jpg 2000w" />
+					</a>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a, <a href="#">convallis quis</a>, pellentesque a, dolor. Curabitur vitae nisi non dolor vestibulum consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a, <a href="#">convallis quis</a>, pellentesque a, dolor. Curabitur vitae nisi non dolor vestibulum consequat. <span id="more-317"></span>
+				</p>
+
 				<h2>Image with link to a bigger size using a lightbox</h2>
 				<p>
 					<a href="../assets/img/sample/beapi_theme-img-2.jpg"><img align="right" alt="#" src="http://placehold.it/150x150" class="alignright"></a>

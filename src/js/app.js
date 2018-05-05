@@ -11,6 +11,7 @@ import ButtonLink from './src/button-href'
 import Select from './src/select'
 import SeoLink from './src/seo'
 import AccessibilityTests from './src/accessibility-tests'
+import ScrollFire from './src/scrollfire'
 
 const menu = new Menu()
 menu.init()
@@ -22,6 +23,9 @@ const selects = ['.gform_wrapper select:not([multiple])']
 selects.forEach(el => Select.bind(el))
 
 SeoLink.bind('[data-seo]')
+
+const scrollFire = new ScrollFire()
+scrollFire.init()
 
 /**
  * LazySizes configuration

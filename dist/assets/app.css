@@ -1771,11 +1771,14 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     max-width: 100%;
     height: auto; }
   .entry__item, .entry__card {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    opacity: 0; }
     .entry__item::after, .entry__card::after {
       clear: both;
       content: "";
       display: table; }
+    .entry__item.entry--visible, .entry__card.entry--visible {
+      opacity: 1; }
     .entry__item .entry__img, .entry__card .entry__img {
       margin-bottom: 20px;
       margin-left: auto;

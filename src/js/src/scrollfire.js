@@ -2,11 +2,14 @@ import inView from 'in-view'
 
 class ScrollFire {
   constructor() {
-    this.el = '.entry__item'
+    this.el = '.animate'
   }
   init() {
     inView(this.el).on('enter', el => {
-      el.classList.add('entry--visible')
+      el.classList.add('in-view')
+    })
+    inView(this.el).on('exit', el => {
+      el.classList.remove('in-view')
     })
     inView.threshold(0.5)
   }

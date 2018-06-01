@@ -67,10 +67,6 @@
 	&__card {
 		@include clearfix;
 		margin-bottom: $base-spacing;
-		opacity: 0;
-		&.entry--visible {
-			opacity: 1;
-		}
 		@include breakpoints(sm) {
 			margin-bottom: $base-spacing*2;
 		}

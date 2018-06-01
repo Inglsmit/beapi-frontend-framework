@@ -21,6 +21,11 @@
                 <?php include 'blocks/entry__seo-01.php' ?>
                 <?php include 'blocks/entry__seo-01.php' ?>
             </div>
+            <!-- AOS example -->
+            <h2 class="entry__title" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">An example of an animated block</h2>
+            <div class="entry__loop" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <?php include 'blocks/entry__seo-01.php' ?>
+            </div>
         </div>
     </div>
 <?php include 'footer.php'; ?>

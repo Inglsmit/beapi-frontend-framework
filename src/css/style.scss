@@ -9,6 +9,11 @@
  */
 @import "root/susy/sass/susy";
 
+/**
+ * Load AOS - scroll animation library
+ */
+@import "root/aos/src/sass/aos";
+
 @import "root/mixins";
 @import "root/variables";
 

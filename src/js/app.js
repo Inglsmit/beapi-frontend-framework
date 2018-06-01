@@ -5,6 +5,7 @@ import './polyfill/picturefill'
 import './polyfill/forEach'
 import lazySizes from 'lazysizes'
 import lazySizesBgset from 'lazysizes/plugins/bgset/ls.bgset'
+import AOS from 'aos'
 
 import './src/menu'
 import './src/button-href'
@@ -23,6 +24,12 @@ lazySizes.customMedia = {}
  * https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/bgset#lazysizes-bgset-extension---responsive-background-images
  */
 lazySizesBgset.customMedia = {}
+
+/**
+ * AOS scroll animation library
+ * https://github.com/michalsnik/aos
+ */
+AOS.init()
 
 /**
  * Load SVG sprite and automate a11y tests only in our dist folder

@@ -67,6 +67,7 @@
     "webpack-svgstore-plugin": "^4.0.1"
   },
   "dependencies": {
+    "aos": "^2.3.0",
     "critical": "^0.7.3",
     "jquery": "^3.2.1",
     "jquery.placeholder": "^2.0.7",

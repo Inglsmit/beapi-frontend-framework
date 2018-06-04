@@ -11,9 +11,9 @@
         <div class="container">
             <h2 class="entry__title">An example of entry list</h2>
             <div class="entry__loop">
-                <?php include 'blocks/entry__summary-01.php' ?>
-                <?php include 'blocks/entry__summary-01.php' ?>
-                <?php include 'blocks/entry__summary-01.php' ?>
+		<?php for($i=0;$i < 50; $i++):?>
+                	<?php include 'blocks/entry__summary-01.php' ?>
+		<?php endfor; ?>
             </div>
             <h2 class="entry__title">An example of entry "card" list</h2>
             <div class="entry__loop">

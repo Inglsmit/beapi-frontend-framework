@@ -508,6 +508,12 @@ html {
   height: 0;
   visibility: hidden; }
 
+.fadeIn {
+  opacity: 0;
+  transition: opacity .3s ease-in-out; }
+  .fadeIn.done {
+    opacity: 1; }
+
 /**
  * Vendor for external librairies (Slick etc.)
  */

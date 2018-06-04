@@ -11,7 +11,7 @@ import ButtonLink from './src/button-href'
 import Select from './src/select'
 import SeoLink from './src/seo'
 import AccessibilityTests from './src/accessibility-tests'
-import ScrollFire from './src/scrollFire'
+import ScrollFire from './src/scrollfire'
 
 const menu = new Menu()
 menu.init()

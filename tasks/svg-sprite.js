@@ -1,29 +1,45 @@
-const svgstore = require('svgstore')
-const fs = require('fs')
-const path = require('path')
-const SVGO = require('svgo')
+var path = require('path')
+var svgstore = require('gulp-svgstore')
+var svgmin = require('gulp-svgmin')
+var rename = require('gulp-rename')
+var cheerio = require('gulp-cheerio')
+var ext_replace = require('gulp-ext-replace')
 
-const srcIcons = './src/img/icons'
-const distSvg = './dist/icons/icons.svg'
-const prefix = 'icon'
-const sprites = svgstore({
-  copyAttrs: true,
-  inline: true
-})
-const svgo = new SVGO()
+module.exports = function(gulp, plugins) {
+  return function() {
+    gulp
+      .src('assets/img/icons/*.svg')
+      .pipe(rename({ prefix: 'icon-' }))
+      .pipe(
+        svgmin(function(file) {
+          var prefix = path.basename(file.relative, path.extname(file.relative))
+          return {
+            plugins: [
+              {
+                cleanupIDs: {
+                  prefix: prefix + '-',
+                  minify: true,
+                },
+              },
+            ],
+          }
+        })
+      )
+      .pipe(svgstore({ inlineSvg: true }))
+      .pipe(
+        cheerio({
+          run: function($) {
+            $('svg').attr('style', 'position: absolute; width: 0; height: 0; overflow: hidden;')
+          },
+          parserOptions: { xmlMode: true },
+        })
+      )
+      .pipe(gulp.dest('dist/icons'))
+      .pipe(gulp.dest('livingcss/partials'))
 
-module.exports = () => {
-  fs.readdir(srcIcons, (err, files) => {
-    files.forEach(file => {
-      if (path.extname(file) === '.svg') {
-        const filename = file.split('.')[0]
-        // console.log(fs.readFileSync(`${srcIcons}/${file}`, 'utf8'))
-        sprites.add(`${prefix}-${filename}`, fs.readFileSync(`${srcIcons}/${file}`, 'utf8'))
-      }
-    })
-
-    fs.writeFileSync(distSvg, sprites)
-
-    console.log('\x1b[32m', '🤘 SVG Sprite has been generated !')
-  })
+    gulp
+      .src('livingcss/partials/icons.svg')
+      .pipe(ext_replace('.hbs'))
+      .pipe(gulp.dest('livingcss/partials'))
+  }
 }
